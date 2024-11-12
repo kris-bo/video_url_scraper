@@ -1,6 +1,6 @@
 
 let database = [];
-fetch('db/1_us_urlsci_tech_output.json')
+fetch('YOUR_DATABASE.json')
   .then(response => response.json())
   .then(data => {
     database = data;
@@ -8,10 +8,10 @@ fetch('db/1_us_urlsci_tech_output.json')
 
 
 
-
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   if (request.action === 'getDatabase') {
-
+    console.log('background.js');
+    console.log(database.length);
     let currentIndex = 0;
 
     function openNextTab() {
@@ -31,7 +31,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
               currentIndex++;
               openNextTab();
             });
-          }, 50000); // 5 seconds
+          }, 70000); // 5 seconds
         });
       }
     }
