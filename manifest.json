@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Video Url Scraper",
+    "version": "1.0",
+    "description": "A YouTube extension that extracts video URLs from channels",
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "js": ["contentScript.js"],
+        "matches": ["YOUR_STARTING_PAGE"]
+      }
+    ],
+    "permissions": ["activeTab", "scripting", "tabs"]
+  }
