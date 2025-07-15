@@ -9,7 +9,7 @@ This Chrome extension allows the user to get URLs of every single video of any n
 - Visits each `/videos` page automatically
 - Sends a message to the content script to scrape data
 - Closes the tab after scraping
-- Rinse and repeat for the next channel in you JSON file
+- Rinse and repeat for the next channel in your JSON file
 
 ---
 
